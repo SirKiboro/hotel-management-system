@@ -3,6 +3,7 @@ package dev.ouhteen.lakeSide_hotel.service;
 import dev.ouhteen.lakeSide_hotel.model.Room;
 import dev.ouhteen.lakeSide_hotel.repository.RoomRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -11,6 +12,7 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.sql.Blob;
 import java.sql.SQLException;
+import java.util.List;
 
 @RequiredArgsConstructor
 @Service
@@ -33,5 +35,12 @@ public class RoomService implements IRoomService{
         }
 
         return roomRepository.save(room);
+    }
+
+    @Override
+    public List<String> getAllRoomTypes() {
+
+
+        return roomRepository.findDistinctRoomTypes();
     }
 }
