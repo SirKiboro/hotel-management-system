@@ -27,7 +27,7 @@ export async function getRoomTypes(){
         return response.data
 
     } catch (error) {
-        throw new Error("Failed to fetch room types")
+        throw new Error("Failed to fetch room types", {cause: error})
     }
 }
         
