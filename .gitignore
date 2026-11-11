@@ -1,0 +1,13 @@
+# IDE configuration
+/.idea/
+/.vscode/
+
+# Environment files
+.env
+**/.env
+
+# JVM crash logs
+hs_err_pid*.log
+
+# Maven build output
+**/target/
