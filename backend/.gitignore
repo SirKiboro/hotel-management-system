@@ -32,5 +32,9 @@ build/
 ### VS Code ###
 .vscode/
 
+# Parent directory IDE configurations
+../.idea/
+../.vscode/
+
 ### ENV ###
 .env
